@@ -3,10 +3,13 @@
 <head>
     <meta charset="utf-8">
     <title>WebUSB测试</title>
+	<script>
+		function connect() {
+			navigator.usb.getDevices().then(devices => {console.log(devices)})
+		}
+	</script>
 </head>
 <body>
-<script>
-	navigator.usb.getDevices().then(devices => {console.log(devices)})
-</script>
+	<button type="button" onclick="connect()">connect</button>
 </body>
 </html>
