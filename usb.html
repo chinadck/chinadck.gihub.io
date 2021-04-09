@@ -10,7 +10,7 @@
 				console.log(device.manufacturerName); // "Arduino LLC"
 			}).catch(error => { console.log(error); });
 		}
-		function connect() {
+		function getDevices() {
 			navigator.usb.getDevices().then(device => {
 				console.log(device.productName);      // "Arduino Micro"
 				console.log(device.manufacturerName); // "Arduino LLC"
