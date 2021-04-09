@@ -5,7 +5,7 @@
     <title>WebUSB测试</title>
 	<script>
 		function connect() {
-			navigator.usb.requestDevice({}).then(device => {
+			navigator.usb.requestDevice({ filters: [{ vendorId: 0x0000 }] }).then(device => {
 				console.log(device.productName);      // "Arduino Micro"
 				console.log(device.manufacturerName); // "Arduino LLC"
 			}).catch(error => { console.log(error); });
