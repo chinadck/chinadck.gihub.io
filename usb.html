@@ -10,9 +10,16 @@
 				console.log(device.manufacturerName); // "Arduino LLC"
 			}).catch(error => { console.log(error); });
 		}
+		function connect() {
+			navigator.usb.getDevices().then(device => {
+				console.log(device.productName);      // "Arduino Micro"
+				console.log(device.manufacturerName); // "Arduino LLC"
+			}).catch(error => { console.log(error); });
+		}
 	</script>
 </head>
 <body>
 	<button type="button" onclick="connect()">connect</button>
+	<button type="button" onclick="getDevices()">get devices</button>
 </body>
 </html>
